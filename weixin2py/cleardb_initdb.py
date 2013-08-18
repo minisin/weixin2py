@@ -12,8 +12,8 @@ setup_environ(settings)
 #系统环境设置完毕
 
 dbname = 'weixin2py'
-rootusername = 'root'
-root_passwd = '19921226'
+rootusername = 'dbname'
+root_passwd = 'db_pwd'
 tables_to_delete = 'core_college,core_intereststags,core_weixinuser,core_weixinuserprofile,core_weixinuserprofile_college_name,core_weixinuserprofile_interests_tags;'#
 #try:
 #	sys.argv[1] and sys.argv[2]

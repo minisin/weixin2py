@@ -86,5 +86,5 @@ def main(user_name,passwd,year='',term=''):
     #print str_data#.decode('utf-8')
     return str_data
 if __name__ == '__main__':
-    main('031140816','19921226')
+    main('testname','test_pwd')
     

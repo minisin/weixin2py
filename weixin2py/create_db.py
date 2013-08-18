@@ -1,4 +1,8 @@
 #coding:utf-8
+rootusername = 'root'
+root_passwd = 'db_root_pwd'
+
+
 import MySQLdb
 import sys,os
 from datetime import *
@@ -11,9 +15,7 @@ from core.models import *
 setup_environ(settings)
 #系统环境设置完毕
 
-dbname = 'weixin2py'
-rootusername = 'root'
-root_passwd = 'db_root_pwd'
+
 #try:
 #	sys.argv[1] and sys.argv[2]
 #except :

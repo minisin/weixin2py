@@ -32,7 +32,7 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'weixin2py',
             'USER': 'weixin2py',
-            'PASSWORD': '19921226',    
+            'PASSWORD': 'pwd',    
             'HOST': 'localhost',                  
             'PORT': '3306',                      
         }
@@ -200,3 +200,4 @@ LOGGING = {
 
 #我的全局变量设置
 SESSION_DICT = {}
+TOKEN = 'kidney'

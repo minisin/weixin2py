@@ -24,7 +24,7 @@
 rootusername = 'root'
 root_passwd = 'db_root_pwd'
 ```
-如果您是mysql数据库，您必须手动创建这个数据库。
+如果您不是mysql数据库，您必须手动创建这个数据库。
 然后，修改您的settings.py
 ```python
 if 'SERVER_SOFTWARE' in os.environ:

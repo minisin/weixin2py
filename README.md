@@ -54,7 +54,7 @@ else:
 将name修改为您的数据库名称，user修改为您的数据库用户，password设置为您的数据库用户。
 您也可以选择别的数据库后端
 
-接下来，运行python manage.py syncdb core初始化数据库，按照提示操作即可。
+接下来，运行python manage.py syncdb 初始化数据库，按照提示操作即可。
 
 最后，修改您的settings.py中的TOKEN，改为您的公众帐号token即可。
 
@@ -68,6 +68,8 @@ else:
  [我的博客](http://blog.sina.com/winkidney) 
 
  [My-github](https://github.com/winkidney)
+ 
+获取进一步的支持，请联系winkidney@gmail.com
 
 by winkidney 20130818
 

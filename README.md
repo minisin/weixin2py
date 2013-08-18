@@ -24,7 +24,7 @@
 rootusername = 'root'
 root_passwd = 'db_root_pwd'
 ```
->如果您是彼得数据库，您必须手动创建这个数据库。
+如果您是mysql数据库，您必须手动创建这个数据库。
 然后，修改您的settings.py
 ```python
 if 'SERVER_SOFTWARE' in os.environ:
@@ -53,8 +53,11 @@ else:
 ```
 将name修改为您的数据库名称，user修改为您的数据库用户，password设置为您的数据库用户。
 您也可以选择别的数据库后端
+
 接下来，运行python manage.py syncdb core初始化数据库，按照提示操作即可。
+
 最后，修改您的settings.py中的TOKEN，改为您的公众帐号token即可。
+
 此时，运行python manage.py 0.0.0.0:80即可运行测试服务器，如果您在您的威信公众帐号中已经设定好了url与token，那么您现在就可以开始使用本服务器了。
 
 
@@ -62,9 +65,9 @@ else:
 ### 4. 关于
 您可以自由使用代码，但是您必须注明出处和作者。
 
- [博客](http://blog.sina.com/winkidney) 
+ [我的博客](http://blog.sina.com/winkidney) 
 
- [My-github](http://github.com/winkidney)
+ [My-github](https://github.com/winkidney)
 
 by winkidney 20130818
 

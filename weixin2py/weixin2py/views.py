@@ -63,6 +63,7 @@ def session_brusher(session_dict):
 import socket,sys
 s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 try:
+    #使用端口绑定检测来保证这个线程不会重复启动，暂时没有想到别的方法。
     s.bind(('127.0.0.1',10086))
     brusher = threading.Thread(target=session_brusher,args=(SESSION_DICT,))
     brusher.setDaemon(True)

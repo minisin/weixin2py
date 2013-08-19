@@ -58,7 +58,7 @@ else:
 
 最后，修改您的settings.py中的TOKEN，改为您的公众帐号token即可。
 
-此时，运行python manage.py 0.0.0.0:80即可运行测试服务器，如果您在您的威信公众帐号中已经设定好了url与token，那么您现在就可以开始使用本服务器了。
+此时，运行python manage.py runserver 0.0.0.0:80即可运行测试服务器，如果您在您的威信公众帐号中已经设定好了url与token，那么您现在就可以开始使用本服务器了。
 
 
 

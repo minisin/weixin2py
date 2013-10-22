@@ -7,11 +7,11 @@ import re
 
 
 #post数据处理和接收的页面
-#posturl = 'http://61.136.204.41:8080/edu/login!checkLogin.action'   #外网
-posturl = 'http://211.67.32.144/edu/login!checkLogin.action'    #内网
+posturl = 'http://61.136.204.41:8080/edu/login!checkLogin.action'   #外网
+#posturl = 'http://211.67.32.144/edu/login!checkLogin.action'    #内网
 #成绩查询地址
-#score_query_url = 'http://61.136.204.41:8080/edu/gradeEnteringStudent!getAllGradeEnter.action'  #外网
-score_query_url = 'http://211.67.32.144/edu/gradeEnteringStudent!getAllGradeEnter.action'    #内网
+score_query_url = 'http://61.136.204.41:8080/edu/gradeEnteringStudent!getAllGradeEnter.action'  #外网
+#score_query_url = 'http://211.67.32.144/edu/gradeEnteringStudent!getAllGradeEnter.action'    #内网
 def score_query(user_name,password,year='',term=''):
     """返回一个成绩查询页面的html文本字符串对象"""
 

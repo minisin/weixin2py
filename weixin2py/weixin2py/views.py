@@ -22,25 +22,20 @@ from settings import SESSION_DICT
 from settings import TOKEN
 
 DEFAULT_MSG =u'''
----------------------------------------------------
-欢迎关注彼岸社区微信平台o(∩_∩)o 
-你可以输入以下关键字进入相关功能
-课表    成绩    二手    
-借书    通知    新闻
-勾搭    树洞    学霸    FAQ    
-某些功能需要先绑定帐号哦！
-输入“绑定”以绑定帐号～～
----------------------------------------------------
+----------------------------------
+泥豪，窝是DXE公告姬o(∩_∩)o
+亲想干些什么呢？（输入关键字进入）
+帮助   活动通知   
+成绩 
+----------------------------------
 '''
 BIND_MSG = u'''
----------------------------------------------------
-欢迎关注彼岸社区微信平台o(∩_∩)o 
-你可以输入以下关键字进入相关功能
-课表    成绩    二手    
-借书    通知    新闻
-勾搭    树洞    学霸    FAQ    
-获取帮助请发送“帮助”^_^
----------------------------------------------------
+----------------------------------
+泥豪，谢谢关注DXE公告姬o(∩_∩)o 
+亲想干些什么呢？（输入关键字进入）
+帮助   活动通知   
+成绩   联系方式
+----------------------------------
 '''
 #我的session_dict监控线程
 import threading,time
@@ -215,9 +210,14 @@ def second_hand():
 def books_query():
     '''图书馆借书查询'''
     pass
-def get_notification():
-    '''通知'''
-    pass
+def get_notification(received_msg):
+    '''活动通知'''
+    msg = TextMsg()
+    msg_init(msg,received_msg)
+    msg.content = u'功能开发中=w='
+    user = WeixinUser.objects.get(openid=str(received_msg.from_user_name))
+    return render_to_response('response/text_to_user.xml',locals())
+
 def get_news():
     '''新闻'''
     pass
@@ -228,10 +228,16 @@ def tu_cao():
     pass
 def help():
     '''帮助系统'''
-    pass
+    msg = TextMsg()
+    msg_init(msg,received_msg)
+    msg.content = u'功能开发中=w='
+    user = WeixinUser.objects.get(openid=str(received_msg.from_user_name))
+    return render_to_response('response/text_to_user.xml',locals())
+    
 def send_test():
     pass
 STATUS_DICT = {u'绑定':u'绑定',
                }
 FUNCTION_DICT = {u'成绩':get_score,u'绑定':bind,
+                 u'活动通知':get_notification,u'帮助':help,
                  }
